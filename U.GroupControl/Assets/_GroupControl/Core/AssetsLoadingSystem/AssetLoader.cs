@@ -1,0 +1,30 @@
+using System.Threading.Tasks;
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+namespace _GroupControl.Core.AssetsLoadingSystem
+{
+    public class AssetsLoader : MonoBehaviour, IMapLoader, ICharacterLoader
+    {
+        public async Task<GameObject> LoadMapAsync(IAssetsConfig config)
+        {
+            GameObject mapPrefab = await config.MapPrefabReference.LoadAssetAsync<GameObject>().Task;
+            GameObject map = Instantiate(mapPrefab);
+            
+            return map;
+        }
+
+        public async Task<GameObject[]> LoadCharactersAsync(IAssetsConfig config, int characterCount = 1)
+        {
+            GameObject characterPrefab = await config.CharacterPrefabReference.LoadAssetAsync<GameObject>().Task;
+            GameObject[] characters = new GameObject[characterCount];
+            for (int i = 0; i < characterCount; i++)
+            {
+                Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
+                characters[i] = Instantiate(characterPrefab, randomPosition, Quaternion.identity);
+            }
+            
+            return characters;
+        }
+    }
+}
