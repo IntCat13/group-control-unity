@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
-using GameSystems.Navigation.Types;
+using _GroupControl.Core.NavigationSystem.Types;
 using UnityEngine;
 
 namespace _GroupControl.Core.NavigationSystem

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c54a93b9b3494bb3c3acec3014939e, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  characterCount: 5
+  characterCount: 3
   mapPrefabReference:
     m_AssetGUID: 2e47b39d9bfc9d744bed7f788dc26a95
     m_SubObjectName: 

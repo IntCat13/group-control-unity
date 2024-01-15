@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameSystems.Navigation.Types
+namespace _GroupControl.Core.NavigationSystem.Types
 {
     public class Node: IComparable<Node> {
 

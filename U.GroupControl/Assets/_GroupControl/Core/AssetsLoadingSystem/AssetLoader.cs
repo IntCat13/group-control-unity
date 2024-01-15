@@ -20,7 +20,7 @@ namespace _GroupControl.Core.AssetsLoadingSystem
             GameObject[] characters = new GameObject[characterCount];
             for (int i = 0; i < characterCount; i++)
             {
-                Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
+                Vector3 randomPosition = new Vector3(Random.Range(-2f, 2f), 0f, Random.Range(-2f, 2f));
                 characters[i] = Instantiate(characterPrefab, randomPosition, Quaternion.identity);
             }
             

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
+using _GroupControl.Core.NavigationSystem.Types;
 using _GroupControl.Core.NavigationSystem.Utilities;
-using GameSystems.Navigation.Types;
 using UnityEngine;
 
 namespace _GroupControl.Core.NavigationSystem
