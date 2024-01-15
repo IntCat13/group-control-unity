@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GameSystems.Navigation.Types
+namespace _GroupControl.Core.NavigationSystem.Types
 {
     public struct PathResponse
     {

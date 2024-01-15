@@ -164,11 +164,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2062880564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a340e4c064d7760458d37001fa4003a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dfa16f328f445358158151f4c669c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameConfig: {fileID: 11400000, guid: 571fc74c67d5bd74d829a4d5cb0f903d, type: 2}
-  _characters: []
+  characterConfig: {fileID: 11400000, guid: 813d1a70284d2cd46b5a5017a238e4d8, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

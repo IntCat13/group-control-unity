@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace GameSystems.Navigation.Types
+namespace _GroupControl.Core.NavigationSystem.Types
 {
     public class Heap<T> where T : IComparable<T>
     {

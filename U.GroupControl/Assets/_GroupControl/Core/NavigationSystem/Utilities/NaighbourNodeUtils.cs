@@ -1,4 +1,4 @@
-﻿using GameSystems.Navigation.Types;
+﻿using _GroupControl.Core.NavigationSystem.Types;
 
 namespace _GroupControl.Core.NavigationSystem.Utilities
 {
