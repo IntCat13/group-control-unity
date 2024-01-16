@@ -1,0 +1,16 @@
+{
+    "name": "SelectionAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:23ed6396f7c56884b825f8ff592760d6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

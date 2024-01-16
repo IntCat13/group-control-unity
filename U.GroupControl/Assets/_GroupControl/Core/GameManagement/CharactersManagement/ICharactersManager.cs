@@ -1,4 +1,4 @@
-﻿namespace _GroupControl.Core.GameManagement
+﻿namespace _GroupControl.Core.GameManagement.CharactersManagement
 {
     public interface ICharactersManager
     {
