@@ -24,6 +24,7 @@ namespace _GroupControl.Core.AssetsLoadingSystem
                 characters[i] = Instantiate(characterPrefab, randomPosition, Quaternion.identity);
             }
             
+            config.CharacterPrefabReference.ReleaseAsset();
             return characters;
         }
     }
