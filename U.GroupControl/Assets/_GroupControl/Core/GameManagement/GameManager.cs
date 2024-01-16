@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using _GroupControl.Core.AssetsLoadingSystem;
 using _GroupControl.Core.Characters.Types;
+using _GroupControl.Core.GameManagement.SavingSystem;
 using UnityEngine;
 
 namespace _GroupControl.Core.GameManagement
@@ -16,17 +17,18 @@ namespace _GroupControl.Core.GameManagement
 
         private async void Awake()
         {
-            await InitializeGame();
+            await InitializeDependencies();
             await LoadMapAssetsAsync();
         }
 
-        private Task InitializeGame()
+        private Task InitializeDependencies()
         {
             var assetLoader = gameObject.AddComponent<AssetsLoader>();
             var charactersManager = gameObject.AddComponent<CharactersManager>();
             var userInput = gameObject.AddComponent<UserInputManager>();
+            var saveManager = gameObject.AddComponent<SaveManager>();
             
-            charactersManager.Initialize(assetLoader, gameConfig, characterConfig);
+            charactersManager.Initialize(assetLoader, gameConfig, characterConfig, saveManager);
             userInput.Initialize(charactersManager);
 
             _mapLoader = assetLoader;

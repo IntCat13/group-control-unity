@@ -17,6 +17,9 @@ namespace _GroupControl.Core.Characters
         private Color _pathColor;
         private Vector3 _previousTarget;
         private bool _isRecoveringStamina;
+        
+        public CharacterInfo GetCharacterInfo()
+            => _info;
 
         public Transform CurrentPoint => transform;
 
@@ -35,9 +38,11 @@ namespace _GroupControl.Core.Characters
                 StopCoroutine(SetDestinationCoroutine());
         }
 
-        public void Initialize(CharacterInfo info)
+        public void Initialize(CharacterInfo info, Vector3 startPosition = default)
         {
             _info = info;
+            if(startPosition != default)
+                transform.position = startPosition;
         }
 
         public void SetDestination(Vector3 newTarget)
