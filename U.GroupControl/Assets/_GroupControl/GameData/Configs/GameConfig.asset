@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60c54a93b9b3494bb3c3acec3014939e, type: 3}
+  m_Script: {fileID: 11500000, guid: d3da7f61bc64cfc43990f568771956a8, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   characterCount: 3
   mapPrefabReference:
-    m_AssetGUID: 2e47b39d9bfc9d744bed7f788dc26a95
+    m_AssetGUID: c5ce879c63f9b9548a165745583c5e35
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   characterPrefabReference:
-    m_AssetGUID: 2b800af074076744282e8a8f160ea91c
+    m_AssetGUID: c35625aa4d4c2114a9d6d51475e7b289
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
