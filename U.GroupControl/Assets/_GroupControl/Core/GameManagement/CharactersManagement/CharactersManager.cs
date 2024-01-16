@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using _GroupControl.Core.AssetsLoadingSystem;
 using _GroupControl.Core.Characters;
@@ -9,10 +8,12 @@ using UnityEngine;
 using CharacterInfo = _GroupControl.Core.Characters.Types.CharacterInfo;
 
 
-namespace _GroupControl.Core.GameManagement
+namespace _GroupControl.Core.GameManagement.CharactersManagement
 {
-    public class CharactersManager: MonoBehaviour, ICharactersManager
+    public class CharactersManager: MonoBehaviour, ICharactersManager, ICharacterSelect
     {
+        public static ICharacterSelect Selector { get; private set; }
+        
         private ISaveManager _saveManager;
         private ICharacterLoader _characterLoader;
         private ICharacter[] _characters;
@@ -34,17 +35,34 @@ namespace _GroupControl.Core.GameManagement
             _characters[_currentCharacterIndex].SetDestination(targetPosition);
         }
         
+        public void SelectCharacter(int characterIndex)
+        {
+            if(_characters == null || _characters.Length <= characterIndex)
+                return;
+            
+            _currentCharacterIndex = characterIndex;
+            InitLeaders();
+        }
+        
+        private void Awake()
+        {
+            if (Selector != null && !ReferenceEquals(Selector, this))
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Selector = this;
+        }
+
+        private void OnDestroy()
+        {
+            if (Selector == this)
+                Selector = null;
+        }
+        
         private async void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _currentCharacterIndex++;
-                if (_currentCharacterIndex >= _characters.Length)
-                    _currentCharacterIndex = 0;
-                
-                InitLeaders();
-            }
-            
             if (Input.GetKeyDown(KeyCode.F5))
                 await Save();
             

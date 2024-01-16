@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _GroupControl.Core.GameManagement.CharactersManagement;
+using UnityEngine;
 
 namespace _GroupControl.Core.GameManagement
 {

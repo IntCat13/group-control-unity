@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using _GroupControl.Core.AssetsLoadingSystem;
 using _GroupControl.Core.Characters.Types;
+using _GroupControl.Core.GameManagement.CharactersManagement;
 using _GroupControl.Core.GameManagement.SavingSystem;
 using UnityEngine;
 
